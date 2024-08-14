@@ -54,6 +54,7 @@ router.post("/", auth_1.default, [
     }
     catch (e) {
         console.log(e);
+        console.log("its meo")
         res.status(500).json({ message: "Something went wrong" });
     }
 }));

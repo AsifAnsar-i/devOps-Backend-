@@ -12,7 +12,7 @@ const storage = multer.memoryStorage();
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 5 * 1024 * 1024, // 5MB
+    fileSize: 10 * 1024 * 1024, // 5MB
   },
 });
 
@@ -52,6 +52,7 @@ router.post(
       res.status(201).send(hotel);
     } catch (e) {
       console.log(e);
+      console.log("Its me");
       res.status(500).json({ message: "Something went wrong" });
     }
   }
