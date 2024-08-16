@@ -39,5 +39,5 @@ app.use("/api/my-bookings", bookingRoutes);
 
 
 app.listen(7000, () => {
-  console.log("server running on localhost:7000");
+  console.log("server running on the  localhost:7000");
 });
