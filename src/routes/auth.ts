@@ -45,7 +45,6 @@ router.post(
       res.cookie("auth_token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite: "none",
         maxAge: 86400000,
       });
       res.status(200).json({ userId: user._id });
@@ -64,7 +63,6 @@ router.post("/logout", (req: Request, res: Response) => {
   res.cookie("auth_token", "", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "none",
     expires: new Date(0),
   });
   res.send();
