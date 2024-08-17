@@ -58,4 +58,4 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d "$json_payload" \
-            https://api.render.com/v1/services/$service_id/deploys -v
+            https://api.render.com/v1/services/$service_id/deploys
